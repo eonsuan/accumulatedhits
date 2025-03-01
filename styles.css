@@ -1,0 +1,124 @@
+@font-face {
+  font-family: 'SM태고딕';
+  src: url('/SM태고딕-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'SM태고딕';
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden; 
+  padding: 5vh 5vw; 
+  box-sizing: border-box;
+  background-image: none;
+}
+
+.button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 80px; 
+  height: auto;
+}
+
+.button img {
+  width: 70%;
+  height: auto;
+}
+
+.stamp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: auto;
+  pointer-events: none; 
+}
+
+
+.title {
+  margin-top: 2vh;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.foot {
+  margin-bottom: 2vh;
+  font-size: clamp(1rem, 2.5vw, 1.5rem); 
+  text-decoration: underline;
+  text-underline-offset: 0.8rem;
+  user-select: none;
+  animation: blink-animation 0.9s steps(1, start) infinite; 
+}
+
+@keyframes blink-animation {
+  0%, 100% { opacity: 1; } 
+  50% { opacity: 0; }    
+}
+
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iphone {
+  width: 300px;
+  height: auto;
+  display: block;
+}
+
+canvas {
+  position: absolute;
+  top: 16.3%;  
+  left: 8%;  
+  width: 84.7%; 
+  height: 67.8%;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 50;
+}
+
+#cursor-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 1000; 
+}
+
+#cursor-image {
+  position: absolute;
+  width: auto;
+  height: auto;
+  width: 25vw; 
+  height: auto; 
+  transform: translate(-35%, 0%);
+  z-index: 1000; 
+}
+
+.mob-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
